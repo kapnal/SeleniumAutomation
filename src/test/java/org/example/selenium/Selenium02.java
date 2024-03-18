@@ -3,6 +3,7 @@ package org.example.selenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
 public class Selenium02 {
@@ -18,7 +19,7 @@ public class Selenium02 {
         // System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
         // Max -> Selenium 4
 
-//        WebDriver driver = new EdgeDriver();
+          WebDriver driver = new EdgeDriver();
 //        WebDriver driver2 = new ChromeDriver();
 //        WebDriver driver3 = new FirefoxDriver();
 //        WebDriver driver4 = new InternetExplorerDriver();

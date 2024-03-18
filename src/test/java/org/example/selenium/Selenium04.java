@@ -5,7 +5,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.WebDriver;
 
 
-public class Selenium04 {
+public class  Selenium04 {
     public static void main(String[] args) {
 
         EdgeOptions edgeOptions = new EdgeOptions();
