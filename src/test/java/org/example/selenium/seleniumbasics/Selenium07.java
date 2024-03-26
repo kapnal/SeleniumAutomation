@@ -1,4 +1,4 @@
-package org.example.selenium;
+package org.example.selenium.seleniumbasics;
 
 import org.openqa.selenium.edge.EdgeDriver;
 

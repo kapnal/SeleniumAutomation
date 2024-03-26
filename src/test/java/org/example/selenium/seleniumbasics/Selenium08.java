@@ -1,4 +1,4 @@
-package org.example.selenium;
+package org.example.selenium.seleniumbasics;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
