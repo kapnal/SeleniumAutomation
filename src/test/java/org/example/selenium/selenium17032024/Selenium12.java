@@ -12,7 +12,7 @@ public class Selenium12 {
 
     @Test(groups = "QA")
     @Description("Verify the current URl, title of VWO app")
-    public void testVWOLogin12() throws InterruptedException {
+    public void testkatalonLogin12() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();
 
