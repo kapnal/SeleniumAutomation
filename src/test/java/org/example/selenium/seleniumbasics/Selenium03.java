@@ -25,7 +25,6 @@ public class Selenium03 {
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addExtensions(new File("/Users/kapil/Downloads/AddBlocker.crx"));
-
         WebDriver driver  = new ChromeDriver(chromeOptions);
         driver.get("https://youtube.com");
 

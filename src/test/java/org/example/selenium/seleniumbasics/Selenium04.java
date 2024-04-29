@@ -10,6 +10,7 @@ public class  Selenium04 {
 
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("--start-maximized");
+        //edgeOptions.addArguments("--headless");
         //edgeOptions.addArguments("--incognito");
         edgeOptions.addArguments("--window-size=800,600");
         EdgeDriver driver = new EdgeDriver(edgeOptions); // Dynamic Dispatch -> Runtime Poly

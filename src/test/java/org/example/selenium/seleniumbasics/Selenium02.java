@@ -49,7 +49,7 @@ public class Selenium02 {
         WebDriver driver1 = new EdgeDriver(); // Case 2
         driver1 = new ChromeDriver();
         // Interview Why we use Case 2 , not the 1
-        // If use the Line 51 - EdgeDriver driver = new EdgeDriver();
+        // If use the Line 48 - EdgeDriver driver = new EdgeDriver();
         // You will not be able to reuse the driver instance or ref
         // So it means, You can't change the browser in the script.
 

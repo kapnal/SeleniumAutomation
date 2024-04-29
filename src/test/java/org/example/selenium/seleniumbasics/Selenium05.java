@@ -11,7 +11,7 @@ public class Selenium05 {
     public static void main(String[] args) {
 
         EdgeOptions edgeOptions = new EdgeOptions();
-        edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        edgeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
 
         Proxy proxy = new Proxy();
         proxy.setHttpProxy("121.40.185.42:1080");

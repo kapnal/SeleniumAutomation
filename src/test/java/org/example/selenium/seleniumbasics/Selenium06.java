@@ -11,9 +11,9 @@ public class Selenium06 {
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
 
-        // driver.close();  //Close current browser window only - session id !=null it will invalid session id
+       // driver.close();  //Close current browser window only - session id !=null it will invalid session id
 
-        driver.quit();  //close all browser window and close browser - session is = null
+       driver.quit();  //close all browser window and close browser - session is = null
 
     }
 }

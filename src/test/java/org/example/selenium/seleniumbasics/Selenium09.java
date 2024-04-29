@@ -18,7 +18,7 @@ public class Selenium09 {
 
         // 1. Open the URL .app.vwo.com/#/login](https://app.vwo.com/#/login)
 
-        driver.get("https://app.vwo.com/#/login");
+        driver.get("https://app.vwo.com ");
         System.out.println(driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Login - VWO");
         Assert.assertEquals(driver.getCurrentUrl(),"https://app.vwo.com/#/login");
