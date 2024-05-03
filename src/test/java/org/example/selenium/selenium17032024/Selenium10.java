@@ -20,10 +20,11 @@ public class Selenium10 {
 
             WebElement anchor_tag = driver.findElement(By.partialLinkText("Start a free"));
 
+
             System.out.println(anchor_tag.getAttribute("href"));
             anchor_tag.click();
 
-           driver.close();
+           driver.quit();
 
 
         }

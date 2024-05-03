@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class Selenium13 {
 
     @Test(groups = "QA")
-    @Description("Verify the current URl, title of VWO app")
+    @Description("Verify the current URl, title of Katalon app")
     public void testVWOLogin13() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();

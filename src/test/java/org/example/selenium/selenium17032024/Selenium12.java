@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class Selenium12 {
 
     @Test(groups = "QA")
-    @Description("Verify the current URl, title of VWO app")
+    @Description("Verify the current URl, title of Katalon app")
     public void testkatalonLogin12() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();
@@ -19,7 +19,7 @@ public class Selenium12 {
         driver.get("https://katalon-demo-cura.herokuapp.com/");
         driver.manage().window().maximize();
 
-       WebElement btnElement_ID = driver.findElement(By.id("btn-make-appointment"));   //If id is vailable preference is to id only
+       WebElement btnElement_ID = driver.findElement(By.id("btn-make-appointment"));   //If id is available preference is to id only
 
         //Different ways to find the wen elements
         //WebElement btnElement_CN = driver.findElement(By.className("btn.btn-dark.btn-lg"));

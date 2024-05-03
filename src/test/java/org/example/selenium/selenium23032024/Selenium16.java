@@ -39,14 +39,21 @@ public class Selenium16 {
 
         //We can use By.className='s-item__title';
         List<WebElement> searchedTitles = driver.findElements(By.xpath("//div[@class='s-item__title']"));
-
+          int i = 0;
         for (WebElement title:searchedTitles){
             System.out.println(title.getText());
 
+            if(i == 10){
+                title.click();
+
+            }
+            i++;
 
         }
 
+
     }
+
 
     @AfterTest
     public void closeBrowser() {
