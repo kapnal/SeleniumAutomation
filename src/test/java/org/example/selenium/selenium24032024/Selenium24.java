@@ -39,9 +39,9 @@ public class Selenium24 {
           WebElement ch1 = checkBoxes.get(0);
           ch1.click();
           //ch1.click();   //Unchecked
-
-        WebElement ch2 = checkBoxes.get(1);
-        ch2.click();   //If it is already checked after click it will unchecked
+//
+//        WebElement ch2 = checkBoxes.get(1);
+//        ch2.click();   //If it is already checked after click it will unchecked
 
 
 

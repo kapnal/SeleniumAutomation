@@ -41,7 +41,7 @@ public class Selenium21 {
 
 
 
-        Thread.sleep(15000);
+        Thread.sleep(5000);
 
     }
 

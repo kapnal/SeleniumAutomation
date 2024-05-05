@@ -47,7 +47,7 @@ public class Selenium22 {
 
 
 
-        Thread.sleep(15000);
+        Thread.sleep(5000);
 
     }
 

@@ -1,18 +1,22 @@
-package org.example.selenium.selenium24032024;
+package org.example.selenium.practice;
 
 import io.qameta.allure.Description;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Selenium20 {
+import java.time.Duration;
+
+public class Lab002 {
 
     EdgeDriver driver;
     @BeforeTest
@@ -27,17 +31,12 @@ public class Selenium20 {
     @Test(groups = "QA")
     @Description("Test Case Description")
     public void testPositive() throws InterruptedException {
-        driver.get("https://the-internet.herokuapp.com/dropdown");
+        driver.get("https://www.makemytrip.com/");
         driver.manage().window().maximize();
-        WebElement element_select = driver.findElement(By.id("dropdown"));
-        WebElement element_1 = driver.findElement(By.xpath("//select[@id=\"dropdown\"]/option[@value=\"1\"] "));
-        WebElement element_2 = driver.findElement(By.xpath("//select[@id=\"dropdown\"]/option[@value=\"2\"] "));
-        Select select = new Select(element_select);
-        //select.selectByIndex(0);  //Disabled Please select an option
-        //select.selectByIndex(1);
-        select.selectByIndex(2);
-        //select.selectByVisibleText("Option 2");
-        System.out.println(element_2.getText());
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("span[data-testid=\"cstmModal-close\"]"))));
+        driver.findElement(By.cssSelector("span[data-testid=\"cstmModal-close\"]")).click();
 
         Thread.sleep(5000);
 
