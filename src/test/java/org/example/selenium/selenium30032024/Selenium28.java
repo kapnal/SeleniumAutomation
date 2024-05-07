@@ -6,10 +6,13 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 public class Selenium28 {
@@ -30,19 +33,25 @@ public class Selenium28 {
         driver.get(URL);
         driver.manage().window().maximize();
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value=\"I agree\"]")));
+        WebElement Iaccept_popup = driver.findElement(By.xpath("//input[@value=\"I agree\"]"));
+        Iaccept_popup.click();
+
+
         //*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']
 
         List<WebElement> states = driver.findElements(By.xpath("//*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']"));
 
         for (WebElement state: states){
-//            System.out.println(state.getAttribute("aria-label"));
+           System.out.println(state.getAttribute("aria-label"));
             if(state.getAttribute("aria-label").contains("Tripura")){
                 state.click();
             }
         }
 
         //I Agree popup is coming that can be handle using Action Class
-        Thread.sleep(30000);
+        Thread.sleep(10000);
 
 
     }
