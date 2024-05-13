@@ -36,7 +36,7 @@ public class Selenium38 {
         String mainWindowHandle = driver.getWindowHandle();
         System.out.println("Before Click " + mainWindowHandle);
         Actions ac = new Actions(driver);
-        ac.moveToElement(driver.findElement(By.cssSelector("[data-qa=\"yedexafobi\"]"))).click().build().perform();
+        ac.moveToElement(driver.findElement(By.cssSelector("[data-qa=\"meqeqiwiwe\"]"))).click().build().perform();
 
         Thread.sleep(3000);
 

@@ -7,14 +7,15 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import java.util.List;
 
 import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
-public class Selenium39 {
+public class Selenium42 {
 
     EdgeDriver driver;
     @BeforeTest
@@ -28,11 +29,30 @@ public class Selenium39 {
     @Test(groups = "QA")
     @Description("Test Case Description")
     public void testPositive() throws InterruptedException {
-        String URL = "https://awesomeqa.com/practice.html";
+        String URL = "https://www.aqi.in/real-time-most-polluted-city-ranking";
         driver.get(URL);
         driver.manage().window().maximize();
-        WebElement span_element = driver.findElement(By.xpath("//span[text()='Years of Experience']"));
-        driver.findElement(with(By.id("exp-3")).toRightOf(span_element)).click();
+        Thread.sleep(5000);
+
+        WebElement searchelement = driver.findElement(By.xpath("//input[@id=\"search_city\"]"));
+        searchelement.sendKeys("India" + Keys.ENTER);
+
+        List<WebElement> list_of_states = driver.findElements(By.xpath("//table[@id='example']/tbody/tr/td[2]"));
+        for (WebElement l : list_of_states) {
+            String s1 = driver.findElement(with(By.tagName("p")).toRightOf(l)).getText();
+            String s2 = driver.findElement(with(By.tagName("p")).toLeftOf(l)).getText();
+            String s3 = driver.findElement(with(By.tagName("p")).below(l)).getText();
+            String s4 = driver.findElement(with(By.tagName("p")).above(l)).getText();
+
+            System.out.println(l.getText()+ " | " + s1 + " | " + s2);
+            System.out.println(l.getText()+ " | " + s3 + " | " + s4);
+
+
+
+        }
+
+
+
         Thread.sleep(5000);
 
 
