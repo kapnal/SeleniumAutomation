@@ -8,6 +8,7 @@ public class Selenium01 {
 
     public static void main(String[] args) {
         WebDriver driver = new EdgeDriver();
+        driver.manage().window().maximize();
         driver.get("https://sdet.live");
         System.out.println(driver.getTitle());
         driver.quit();

@@ -5,10 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class Lab001 {
 
@@ -65,16 +69,14 @@ public class Lab001 {
 
         driver.findElement(By.id("js-login-btn")).click();
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
-        WebElement user = driver.findElement(By.xpath("//span[@data-qa=\"lufexuloga\"]"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10000));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-qa=\"lufexuloga\"]")));
+
+        WebElement user = driver.findElement(By.cssSelector("[data-qa=\"lufexuloga\"]"));
         String loggedinUser = user.getText();
         System.out.println(loggedinUser);
-        Assert.assertEquals(loggedinUser,"kap nal");
+        Assert.assertEquals(loggedinUser,"Kapil Nalwar");
 
     }
 
