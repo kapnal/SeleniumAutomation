@@ -13,7 +13,7 @@ public class  Selenium04 {
         //edgeOptions.addArguments("--headless");
         //edgeOptions.addArguments("--incognito");
         //edgeOptions.addArguments("--window-size=800,600");
-        EdgeDriver driver = new EdgeDriver(edgeOptions); // Dynamic Dispatch -> Runtime Poly
+        WebDriver driver = new EdgeDriver(edgeOptions); // Dynamic Dispatch -> Runtime Poly
         driver.get ("https://sdet.live");
         System.out.println(driver.getTitle());
 

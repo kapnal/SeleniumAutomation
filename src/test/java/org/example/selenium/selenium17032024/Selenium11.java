@@ -15,23 +15,24 @@ public class Selenium11 {
     public void testVWOLogin11() {
 
         WebDriver driver = new EdgeDriver();
-
+        // 1. Open the URL .app.vwo.com/#/login](https://app.vwo.com/#/login)
         driver.get("https://app.vwo.com/#/login");
+        // Question - Print all the anchor Tags on this vwo.com
+        // a tags and print the getText
+        List<WebElement> all_atags = driver.findElements(By.tagName("a"));
+           //all_atags.get(1).click(); // start free trial
+//        all_atags.get(1).click(); // 2nd one - vwo insights
+        System.out.println(all_atags.size()); // 2
 
-        //Print all the anchor tags  a tags and getText
 
-        List<WebElement> all_tags = driver.findElements(By.tagName("a") );
-
-        all_tags.get(0).click();  // It will click oStart free trial
-        all_tags.get(1).click(); // It will click  Read more about
-        all_tags.size();
-
-        for(WebElement element:all_tags){
-
+        for( WebElement element: all_atags){
             System.out.println(element.getText());
         }
 
-        driver.quit();
+
+
+
+        driver.quit(); // Close the current window
 
     }
 }

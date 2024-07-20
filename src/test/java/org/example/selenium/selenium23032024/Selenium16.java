@@ -20,6 +20,7 @@ public class Selenium16 {
     public void openBrowser() {
         EdgeOptions options = new EdgeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        options.addArguments("--guest");
         driver = new EdgeDriver(options);
     }
 
@@ -39,15 +40,15 @@ public class Selenium16 {
 
         //We can use By.className='s-item__title';
         List<WebElement> searchedTitles = driver.findElements(By.xpath("//div[@class='s-item__title']"));
-          int i = 0;
+         // int i = 0;
         for (WebElement title:searchedTitles){
             System.out.println(title.getText());
 
-            if(i == 10){
-                title.click();
+//            if(i == 10){
+//                title.click();
 
-            }
-            i++;
+            //}
+            //i++;
 
         }
 

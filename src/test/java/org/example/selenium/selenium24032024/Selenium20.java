@@ -35,8 +35,8 @@ public class Selenium20 {
         Select select = new Select(element_select);
         //select.selectByIndex(0);  //Disabled Please select an option
         //select.selectByIndex(1);
-        select.selectByIndex(2);
-        //select.selectByVisibleText("Option 2");
+        //select.selectByIndex(2);
+        select.selectByVisibleText("Option 2");
         System.out.println(element_2.getText());
 
         Thread.sleep(5000);

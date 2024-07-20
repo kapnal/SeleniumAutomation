@@ -36,10 +36,11 @@ public class Selenium36 {
 
         WebElement uploadFileInput = driver.findElement(By.id("fileToUpload"));
 
-        String dir = System.getProperty("user.dir");
-        System.out.println(dir);
-        uploadFileInput.sendKeys(dir+"\\src\\test\\java\\org\\example\\selenium\\selenium31032024\\toUpload.txt");
+          String dir = System.getProperty("user.dir");
+          System.out.println(dir);
+          uploadFileInput.sendKeys(dir+"\\src\\test\\java\\org\\example\\selenium\\selenium31032024\\toUpload.txt");
 //if we want to give directory path :
+
 
         driver.findElement(By.name("submit")).click();
 

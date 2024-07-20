@@ -40,6 +40,7 @@ public class Selenium18 {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-qa='lufexuloga']")));
         WebElement loggedin_username = driver.findElement(By.cssSelector("[data-qa='lufexuloga']"));
 
+
         System.out.println("Logged in User details -> " + loggedin_username.getText());
 
     }

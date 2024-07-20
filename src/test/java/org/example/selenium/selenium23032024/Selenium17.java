@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Selenium17 {
 
@@ -29,7 +30,8 @@ public class Selenium17 {
     public void testNegative() {
         driver.get("https://app.vwo.com");
         driver.manage().window().maximize();
-        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         // Global wait to all the elements which we don't use
 
         driver.findElement(By.id("login-username")).sendKeys("abc@gmail.com");
@@ -40,6 +42,7 @@ public class Selenium17 {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3000));
         wait.until(ExpectedConditions.textToBePresentInElement(error_msg,"Your email, password, IP address or location did not match"));
         System.out.println("1 -> " + error_msg.getText());
+
 
     }
 

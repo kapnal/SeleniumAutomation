@@ -13,7 +13,7 @@ public class Selenium14 {
     // TC who don't have any dependency
     // They serve single purpose
 
-    EdgeDriver driver;
+    WebDriver driver;
     @BeforeTest
     public void openBrowser(){
         // Create Session via the API and Session ID is generated
@@ -36,7 +36,7 @@ public class Selenium14 {
         driver.manage().window().maximize();
     }
         @AfterTest
-        public void classBrowser(){
+        public void closeBrowser(){
 
         driver.quit();
 
