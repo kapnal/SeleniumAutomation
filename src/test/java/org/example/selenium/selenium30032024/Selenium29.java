@@ -46,7 +46,7 @@ public class Selenium29 {
         WebElement inputboxPizza = (WebElement) js.executeScript("return document.querySelector(\"div#userName\").shadowRoot.querySelector(\"div\").shadowRoot.querySelector(\"input#pizza\")");
         inputboxPizza.sendKeys("FarmHouse");
 
-        Thread.sleep(13000);
+        Thread.sleep(5000);
 
     }
 

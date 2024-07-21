@@ -38,7 +38,7 @@ public class Selenium30 {
         WebElement divScrollTo  = driver.findElement(By.xpath("//div[@id='userName']"));
         js.executeScript("arguments[0].scrollIntoView(true);",divScrollTo);
 
-        Thread.sleep(10000);
+        Thread.sleep(5000);
 
         WebElement learnlink = (WebElement) js.executeScript("return document.querySelector(\"div#userName\").shadowRoot.querySelector(\".learningHub\") ");
        String linkText = learnlink.getText();
@@ -46,7 +46,7 @@ public class Selenium30 {
         js.executeScript("arguments[0].click();", learnlink);
 
 
-        Thread.sleep(13000);
+        Thread.sleep(5000);
 
     }
 
