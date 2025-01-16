@@ -38,7 +38,8 @@ public class Selenium20 {
         //select.selectByIndex(2);
         select.selectByVisibleText("Option 2");
         System.out.println(element_2.getText());
-
+       boolean isselect = element_2.isSelected();
+        System.out.println(isselect);
         Thread.sleep(5000);
 
     }

@@ -32,7 +32,7 @@ public class Selenium32 {
 
         WebElement source = driver.findElement(By.xpath("//div[@data-testid=\"to-testID-origin\"]/div/div/input"));
         Actions actions = new Actions(driver);
-        actions.moveToElement(source).click().build().perform();
+       // actions.moveToElement(source).click().build().perform();
         actions.moveToElement(source).click().sendKeys("BLR").build().perform();
 
         Thread.sleep(10000);

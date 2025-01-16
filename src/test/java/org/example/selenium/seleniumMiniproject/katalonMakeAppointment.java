@@ -73,8 +73,8 @@ public class katalonMakeAppointment {
         Thread.sleep(10000);
 
         driver.findElement(By.id("btn-book-appointment")).click();
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10000));
+        Thread.sleep(10000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()=\"Appointment Confirmation\"]")));
 
         WebElement appoitnement_confirm_msg = driver.findElement(By.xpath("//h2[text()=\"Appointment Confirmation\"]"));

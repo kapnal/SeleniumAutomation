@@ -35,7 +35,7 @@ public class Selenium35 {
         WebElement from = driver.findElement(By.id("column-a"));
         WebElement to = driver.findElement(By.id("column-b"));
 
-       // actions.dragAndDrop(from,to).perform();
+       //actions.dragAndDrop(from,to).perform();
 
         //Another way to Drag and Drop
 

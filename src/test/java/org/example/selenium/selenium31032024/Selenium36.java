@@ -41,7 +41,7 @@ public class Selenium36 {
           uploadFileInput.sendKeys(dir+"\\src\\test\\java\\org\\example\\selenium\\selenium31032024\\toUpload.txt");
 //if we want to give directory path :
 
-               // \src\test\java\org\example\selenium\selenium31032024\toUpload.txt
+               // src/test/java/org/example/selenium/selenium31032024/toUpload.txt
 
         driver.findElement(By.name("submit")).click();
 

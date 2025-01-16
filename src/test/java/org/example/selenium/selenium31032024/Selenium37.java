@@ -42,8 +42,11 @@ public class Selenium37 {
             System.out.println(handle);
             if(driver.getPageSource().contains("New Window")){
                 System.out.println("Test case passed");
+
             }
         }
+
+//        System.out.println(windowHandles);
 
         driver.switchTo().window(mainWindowHandle);
 

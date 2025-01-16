@@ -40,11 +40,13 @@ public class Selenium22 {
         wait.until(ExpectedConditions.alertIsPresent());
 
         Alert alert = driver.switchTo().alert();
-         alert.accept();
+        //alert.dismiss();
+        alert.accept();
 
          
         String result = driver.findElement(By.id("result")).getText();
         Assert.assertEquals(result,"You clicked: Ok");
+        //Assert.assertEquals(result,"You clicked: Cancel");
 
 
 
