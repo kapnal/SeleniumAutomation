@@ -2,6 +2,7 @@ package org.example.selenium.selenium23032024;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -17,7 +18,7 @@ public class Selenium14 {
     @BeforeTest
     public void openBrowser(){
         // Create Session via the API and Session ID is generated
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
     }
 
     @Test(groups = "QA")

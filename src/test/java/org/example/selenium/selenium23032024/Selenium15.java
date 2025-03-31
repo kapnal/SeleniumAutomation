@@ -1,16 +1,17 @@
 package org.example.selenium.selenium23032024;
 
 import io.qameta.allure.Description;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Selenium15 {
 
-    EdgeDriver driver;
+    ChromeDriver driver;
     @BeforeTest
     public void openBrowser(){
-        driver = new EdgeDriver();
+        driver = new ChromeDriver();
     }
 
     @Test(groups = "QA")

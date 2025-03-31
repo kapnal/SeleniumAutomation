@@ -4,6 +4,8 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,13 +19,13 @@ import java.util.List;
 
 public class Selenium28 {
 
-    EdgeDriver driver;
+    ChromeDriver driver;
     @BeforeTest
     public void openBrowser(){
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         options.addArguments("--guest");
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
     @Test(groups = "QA")
@@ -33,9 +35,9 @@ public class Selenium28 {
         driver.get(URL);
         driver.manage().window().maximize();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value=\"I agree\"]")));
-        WebElement Iaccept_popup = driver.findElement(By.xpath("//input[@value=\"I agree\"]"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(text(),\"I understand and agree\")]")));
+        WebElement Iaccept_popup = driver.findElement(By.xpath("//button[contains(text(),\"I understand and agree\")]"));
         Iaccept_popup.click();
 
 

@@ -4,6 +4,8 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,12 +18,12 @@ import java.time.Duration;
 
 public class Selenium18 {
 
-    EdgeDriver driver;
+    ChromeDriver driver;
     @BeforeTest
     public void openBrowser(){
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
     @Test(groups = "QA")
@@ -33,7 +35,7 @@ public class Selenium18 {
         // Global wait to all the elements which we don't use
 
         driver.findElement(By.id("login-username")).sendKeys("kapilnalwar@gmail.com");
-        driver.findElement(By.id("login-password")).sendKeys("St@tion@1234");
+        driver.findElement(By.id("login-password")).sendKeys("Feb@2025");
         driver.findElement(By.id("js-login-btn")).click();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10000));

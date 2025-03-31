@@ -4,6 +4,8 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -13,13 +15,13 @@ import org.testng.annotations.Test;
 
 public class Selenium36 {
 
-    EdgeDriver driver;
+    ChromeDriver driver;
     @BeforeTest
     public void openBrowser(){
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         options.addArguments("--guest");
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
     @Test(groups = "QA")
@@ -38,8 +40,9 @@ public class Selenium36 {
 
           String dir = System.getProperty("user.dir");
           System.out.println(dir);
-          uploadFileInput.sendKeys(dir+"\\src\\test\\java\\org\\example\\selenium\\selenium31032024\\toUpload.txt");
+          uploadFileInput.sendKeys(dir+"\\src/test/java/org/example/selenium/selenium31032024/toUpload.txt");
 //if we want to give directory path :
+
 
                // src/test/java/org/example/selenium/selenium31032024/toUpload.txt
 

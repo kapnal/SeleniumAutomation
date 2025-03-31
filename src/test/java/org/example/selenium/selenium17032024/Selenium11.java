@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 import java.util.List;
@@ -14,7 +15,7 @@ public class Selenium11 {
     @Description("Verify the current URl, title of VWO app")
     public void testVWOLogin11() {
 
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new ChromeDriver();
         // 1. Open the URL .app.vwo.com/#/login](https://app.vwo.com/#/login)
         driver.get("https://app.vwo.com/#/login");
         // Question - Print all the anchor Tags on this vwo.com

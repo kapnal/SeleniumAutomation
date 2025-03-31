@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -17,13 +19,13 @@ import java.util.List;
 
 public class Selenium31 {
 
-    EdgeDriver driver;
+    ChromeDriver driver;
     @BeforeTest
     public void openBrowser(){
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         options.addArguments("--guest");
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
     @Test(groups = "QA")
@@ -39,6 +41,7 @@ public class Selenium31 {
         WebElement firstName = driver.findElement(By.name("firstname"));
 
         Actions actions = new Actions(driver);
+
         actions
                 .keyDown(Keys.SHIFT)
                 .sendKeys(firstName,"thetestingacademy")

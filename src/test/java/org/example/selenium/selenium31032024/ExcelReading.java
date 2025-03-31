@@ -41,7 +41,7 @@ public class ExcelReading {
         //int pa = (int)sh.getRow(1).getCell(2).getNumericCellValue();
         driver.findElement(By.id("email")).sendKeys(us);
         //driver.findElement(By.id("pass")).sendKeys(pa);
-        driver.findElement(By.xpath("//button[@id='loginbutton']")).click();
+        driver.findElement(By.xpath("//button[@name='login']")).click();
 
         Thread.sleep(5000);
 

@@ -33,7 +33,9 @@ public class WindowHandle1 {
         driver.get(URL);
         driver.manage().window().maximize();
 
-        String mainWindowHandle = driver.getWindowHandle();
+//        String mainWindowHandle = driver.getWindowHandle();
+//        System.out.println(mainWindowHandle);
+
 
         WebElement link = driver.findElement(By.linkText("Click Here"));
         link.click();
@@ -51,7 +53,7 @@ public class WindowHandle1 {
 
         //Print title of child window
         driver.switchTo().window(win2);
-        System.out.println("Parent window ID: " + win2);
+        System.out.println("Child window ID: " + win2);
         System.out.println(driver.getTitle());
 
         Thread.sleep(5000);

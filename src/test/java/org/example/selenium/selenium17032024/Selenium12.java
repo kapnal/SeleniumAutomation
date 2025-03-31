@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +15,7 @@ public class Selenium12 {
     @Description("Verify the current URl, title of Katalon app")
     public void testkatalonLogin12() throws InterruptedException {
 
-        WebDriver driver = new EdgeDriver();
+        WebDriver driver = new ChromeDriver();
 
         driver.get("https://katalon-demo-cura.herokuapp.com/");
         driver.manage().window().maximize();

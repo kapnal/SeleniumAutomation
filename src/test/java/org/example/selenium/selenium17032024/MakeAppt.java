@@ -33,7 +33,7 @@ public class MakeAppt {
 
         driver.findElement(By.id("btn-login")).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         driver.quit();
 

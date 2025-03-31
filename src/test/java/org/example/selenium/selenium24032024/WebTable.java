@@ -4,6 +4,8 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterTest;
@@ -14,13 +16,13 @@ import java.util.List;
 
 public class WebTable {
 
-    EdgeDriver driver;
+    ChromeDriver driver;
     @BeforeTest
     public void openBrowser(){
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         options.addArguments("--guest");
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
 
@@ -39,15 +41,15 @@ public class WebTable {
         List<WebElement> currentPrice = driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr/td[4]"));
         System.out.println("Total current Price" + " = " + currentPrice.size());
 
-        String ExpectedResult = "Arigato Universe";
+        String ExpectedResult = "GSS Infotech";
 
         for (int i = 0; i < allCompanies.size(); i++){
-            if(allCompanies.get(i).getText().equalsIgnoreCase(ExpectedResult)){
-                System.out.println(allCompanies.get(i).getText() + " == " + currentPrice.get(i).getText());
-                allCompanies.get(i).click();
-                System.out.println(driver.getTitle());
-                break;
-            }
+             if (allCompanies.get(i).getText().equalsIgnoreCase(ExpectedResult)) {
+                 System.out.println(allCompanies.get(i).getText() + " == " + currentPrice.get(i).getText());
+                 allCompanies.get(i).click();
+                 System.out.println(driver.getTitle());
+                 break;
+             }
         }
 
     }

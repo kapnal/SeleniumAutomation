@@ -2,6 +2,8 @@ package org.example.selenium.selenium23032024;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,12 +18,12 @@ import java.time.Duration;
 
 public class Selenium19 {
 
-    EdgeDriver driver;
+    ChromeDriver driver;
     @BeforeTest
     public void openBrowser(){
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        driver = new EdgeDriver(options);
+        driver = new ChromeDriver(options);
     }
 
     @Test(groups = "QA")
@@ -33,10 +35,10 @@ public class Selenium19 {
         // Global wait to all the elements which we don't use
 
         driver.findElement(By.id("login-username")).sendKeys("kapilnalwar@gmail.com");
-        driver.findElement(By.id("login-password")).sendKeys("St@tion@1234");
+        driver.findElement(By.id("login-password")).sendKeys("Feb@2025");
         driver.findElement(By.id("js-login-btn")).click();
 
-        Wait<EdgeDriver> wait = new FluentWait<>(driver)
+        Wait<ChromeDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofSeconds(2))
                 .ignoring(NoSuchElementException.class);
